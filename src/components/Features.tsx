@@ -6,18 +6,21 @@ import { UsersIcon, BellIcon, LeafIcon } from "./icons";
 
 const SHOWCASE = [
   {
+    id: "roster",
     Visual: RosterVisual,
     tag: "Roster & shift scheduling",
     title: "Build the week in minutes, not a Sunday night",
     body: "Group people by work location, cover a colleague's shift without a chain of approvals, and see the whole team's week at a glance.",
   },
   {
+    id: "attendance",
     Visual: AttendanceVisual,
     tag: "Time & attendance",
     title: "Clock in/out that rounds itself to clean numbers",
     body: "GPS-tagged clock in/out from any phone, with quarter-hour rounding built in — payroll never comes out to '7h 23m' again.",
   },
   {
+    id: "payroll",
     Visual: PayrollVisual,
     tag: "Payroll paperwork",
     title: "Payslips and contracts, uploaded once and always findable",
@@ -58,6 +61,7 @@ export default function Features() {
           {SHOWCASE.map((f, i) => (
             <Reveal
               key={f.title}
+              id={f.id}
               direction={i % 2 === 1 ? "right" : "left"}
               className={`showcase-row ${i % 2 === 1 ? "showcase-row-reverse" : ""}`}
             >
