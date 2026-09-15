@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import TrustedBy from "./components/TrustedBy";
 import Features from "./components/Features";
 import PhotoBand from "./components/PhotoBand";
+import Pricing from "./components/Pricing";
 import Roles from "./components/Roles";
 import Why from "./components/Why";
 import Team from "./components/Team";
@@ -25,6 +26,7 @@ function App() {
         <TrustedBy />
         <Features />
         <PhotoBand />
+        <Pricing />
         <Roles />
         <Why />
         <Team />

@@ -23,6 +23,7 @@ export default function Footer() {
         <div className="footer-col">
           <h3 className="footer-col-title">Product</h3>
           <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
           <a href="#roles">Who it's for</a>
           <a href="#why">Why Shiftline</a>
           <a href="#faq">FAQ</a>

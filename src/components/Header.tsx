@@ -43,6 +43,9 @@ export default function Header() {
           <a href="#customers" onClick={close}>
             Customers
           </a>
+          <a href="#pricing" onClick={close}>
+            Pricing
+          </a>
           <NavDropdown
             label="Company"
             onNavigate={close}
