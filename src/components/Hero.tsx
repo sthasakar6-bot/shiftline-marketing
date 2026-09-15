@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { APP_URL } from "../config";
 
 const BASE_ROWS = [
@@ -14,6 +14,7 @@ const SETTLE_MS = 220;
 export default function Hero() {
   const [tapping, setTapping] = useState(false);
   const [marcusIn, setMarcusIn] = useState(false);
+  const bgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const t1 = setTimeout(() => setTapping(true), TAP_DELAY_MS);
@@ -26,6 +27,25 @@ export default function Hero() {
     };
   }, []);
 
+  // Subtle parallax on the hero background as the page scrolls -- skipped
+  // entirely for reduced-motion users.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        if (bgRef.current) {
+          bgRef.current.style.transform = `translateY(${window.scrollY * 0.15}px)`;
+        }
+        ticking = false;
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const rows = BASE_ROWS.map((r) =>
     r.name === "Marcus" && marcusIn
       ? { ...r, status: "Clocked in", statusClass: "in", live: true }
@@ -34,7 +54,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="top">
-      <div className="hero-bg" aria-hidden="true">
+      <div className="hero-bg" ref={bgRef} aria-hidden="true">
         <span className="blob blob-a" />
         <span className="blob blob-b" />
         <span className="blob blob-c" />

@@ -42,7 +42,7 @@ export default function Roles() {
 
         <div className="roles-grid">
           {ROLES.map((r, i) => (
-            <Reveal key={r.tag} delay={i * 100}>
+            <Reveal key={r.tag} delay={i * 100} direction="scale">
               <div className="role-card">
                 <img className="role-photo" src={r.photo} alt="" />
                 <span className="role-tag">{r.tag}</span>

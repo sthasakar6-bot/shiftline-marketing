@@ -6,7 +6,7 @@ export default function Team() {
   return (
     <section className="section section-alt" id="team">
       <div className="section-inner">
-        <Reveal className="team-card">
+        <Reveal className="team-card" direction="scale">
           <img className="team-photo" src="/photos/team-sagar.jpg" alt="Sakar, from the Shiftline team" />
           <div className="team-copy">
             <p className="eyebrow">Talk with our team</p>

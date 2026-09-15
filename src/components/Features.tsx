@@ -56,7 +56,11 @@ export default function Features() {
 
         <div className="showcase">
           {SHOWCASE.map((f, i) => (
-            <Reveal key={f.title} className={`showcase-row ${i % 2 === 1 ? "showcase-row-reverse" : ""}`}>
+            <Reveal
+              key={f.title}
+              direction={i % 2 === 1 ? "right" : "left"}
+              className={`showcase-row ${i % 2 === 1 ? "showcase-row-reverse" : ""}`}
+            >
               <div className="showcase-visual-frame">
                 <f.Visual />
               </div>
@@ -71,7 +75,7 @@ export default function Features() {
 
         <div className="feature-grid feature-grid-compact">
           {MORE.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90}>
+            <Reveal key={f.title} delay={i * 90} direction="scale">
               <div className="feature-card">
                 <div className="feature-icon">
                   <f.icon />
