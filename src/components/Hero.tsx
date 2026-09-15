@@ -80,7 +80,10 @@ export default function Hero() {
               See how it works
             </a>
           </div>
-          <p className="hero-note">Works on any device — including as an installable app for the shop floor.</p>
+          <p className="hero-note">
+            Free for 30 days, no credit card required — works on any device, including as an
+            installable app for the shop floor.
+          </p>
         </div>
 
         <div className="hero-visual" aria-hidden="true">
