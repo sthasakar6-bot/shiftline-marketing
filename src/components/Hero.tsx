@@ -65,12 +65,12 @@ export default function Hero() {
         <div className="hero-copy">
           <p className="eyebrow">Staff scheduling &amp; workforce management</p>
           <h1>
-            Scheduling, attendance, and payroll paperwork
-            <span className="accent-text"> in one place</span>
+            Keep every shift
+            <span className="accent-text"> in line.</span>
           </h1>
           <p className="hero-sub">
-            Shiftline gives every team a clear roster, accurate clock-in/out records, and a single
-            place for leave requests, contracts, and payslips — no spreadsheets, no chasing paper.
+            Scheduling, attendance, and payroll paperwork for shift-based teams — all in one place,
+            so nothing falls through the cracks.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary btn-lg" href={`${APP_URL}/login`}>

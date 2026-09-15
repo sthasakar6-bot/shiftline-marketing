@@ -30,6 +30,8 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3 className="footer-col-title">Company</h3>
+          <a href="#customers">Customers</a>
+          <a href="#team">Talk with our team</a>
           <a href={`${APP_URL}/login`}>Log in</a>
           <a href={`${APP_URL}/login`}>Get started</a>
           <a href="#contact">Contact</a>

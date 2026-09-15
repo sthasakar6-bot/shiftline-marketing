@@ -7,7 +7,7 @@ const COMPANIES = [
 
 export default function TrustedBy() {
   return (
-    <Reveal className="trusted-by">
+    <Reveal className="trusted-by" id="customers">
       <p className="trusted-by-label">Trusted by teams like</p>
       <div className="trusted-by-logos">
         {COMPANIES.map((c) => (

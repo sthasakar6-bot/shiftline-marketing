@@ -14,13 +14,16 @@ export default function Header() {
 
         <nav className={`site-nav ${open ? "open" : ""}`}>
           <a href="#features" onClick={() => setOpen(false)}>
-            Features
+            Product
           </a>
           <a href="#roles" onClick={() => setOpen(false)}>
             Who it's for
           </a>
-          <a href="#why" onClick={() => setOpen(false)}>
-            Why Shiftline
+          <a href="#customers" onClick={() => setOpen(false)}>
+            Customers
+          </a>
+          <a href="#team" onClick={() => setOpen(false)}>
+            Company
           </a>
           <a href="#contact" onClick={() => setOpen(false)}>
             Contact
