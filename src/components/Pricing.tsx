@@ -15,6 +15,7 @@ const ALL_FEATURES = [
   "Payroll paperwork (payslips & contracts)",
   "Multi-company / unlimited departments",
   "Priority WhatsApp support",
+  "Custom features built for your business",
 ];
 
 // Rows shown in the comparison table below the cards. "text" rows show a
@@ -42,20 +43,25 @@ const COMPARISON_ROWS: {
   { label: "Payroll paperwork (payslips & contracts)", trial: true, starter: false, unlimited: true },
   { label: "Multi-company / unlimited departments", trial: true, starter: false, unlimited: true },
   { label: "Priority WhatsApp support", trial: true, starter: false, unlimited: true },
+  { label: "Custom features built for your business", trial: true, starter: false, unlimited: true },
 ];
 
 function formatPrice(n: number) {
   return `€${n.toFixed(2)}`;
 }
 
+const YEARLY_DISCOUNT = 0.2;
+
 export default function Pricing() {
   const [billing, setBilling] = useState<Billing>("monthly");
 
   const starterMonthly = 9.99;
   const unlimitedMonthly = 19.99;
-  const starterExtra = billing === "monthly" ? 1.99 : 1.79;
-  const starterYearlyTotal = starterMonthly * 12 * 0.9;
-  const unlimitedYearlyTotal = unlimitedMonthly * 12 * 0.9;
+  const starterExtraMonthly = 1.99;
+  const starterExtra =
+    billing === "monthly" ? starterExtraMonthly : starterExtraMonthly * (1 - YEARLY_DISCOUNT);
+  const starterYearlyTotal = starterMonthly * 12 * (1 - YEARLY_DISCOUNT);
+  const unlimitedYearlyTotal = unlimitedMonthly * 12 * (1 - YEARLY_DISCOUNT);
 
   return (
     <section className="section" id="pricing">
@@ -79,7 +85,7 @@ export default function Pricing() {
             className={billing === "yearly" ? "billing-toggle-active" : ""}
             onClick={() => setBilling("yearly")}
           >
-            Yearly <span className="billing-discount">-10%</span>
+            Yearly <span className="billing-discount">-20%</span>
           </button>
         </div>
 

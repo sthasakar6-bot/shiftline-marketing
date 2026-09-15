@@ -81,7 +81,7 @@ export default function Hero() {
             </a>
           </div>
           <p className="hero-note">
-            Free for 30 days, no credit card required — works on any device, including as an
+            Free for 15 days, no credit card required — works on any device, including as an
             installable app for the shop floor.
           </p>
         </div>

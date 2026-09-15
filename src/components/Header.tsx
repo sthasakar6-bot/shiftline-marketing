@@ -64,7 +64,7 @@ export default function Header() {
               <span style={{ marginLeft: 6 }}>Log in</span>
             </a>
             <a className="btn btn-cta" href={`${APP_URL}/login`}>
-              Get started
+              Start 15-day trial
               <ArrowRightIcon size={15} />
             </a>
           </div>
