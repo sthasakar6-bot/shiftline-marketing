@@ -1319,6 +1319,18 @@
   margin: 0 auto;
 }
 
+.pricing-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 980px;
+}
+
+@media (max-width: 860px) {
+  .pricing-grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
 .pricing-card {
   height: 100%;
   background: var(--panel-bg);
@@ -1467,6 +1479,88 @@
 .pricing-footnote a {
   color: var(--accent);
   font-weight: 600;
+}
+
+/* ---------- comparison table ---------- */
+
+.comparison-table-wrap {
+  max-width: 820px;
+  margin: 56px auto 0;
+}
+
+.comparison-title {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.comparison-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+  background: var(--panel-bg);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table thead th {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+.comparison-table thead th:first-child {
+  background: var(--panel-bg);
+}
+
+.comparison-label {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.comparison-text {
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.comparison-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.comparison-tick {
+  background: rgba(21, 128, 61, 0.14);
+  color: #15803d;
+}
+
+.comparison-cross {
+  background: rgba(185, 28, 28, 0.1);
+  color: #b91c1c;
 }
 
 @media (max-width: 640px) {
