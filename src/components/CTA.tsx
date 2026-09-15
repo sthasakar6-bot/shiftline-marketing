@@ -10,7 +10,7 @@ export default function CTA() {
         <h2>Ready to get your schedule under control?</h2>
         <p>Set up your company and add your team in a few minutes — free for 15 days, no credit card required.</p>
         <div className="hero-actions center">
-          <a className="btn btn-primary-invert btn-lg" href={`${APP_URL}/login`}>
+          <a className="btn btn-primary-invert btn-lg" href={`${APP_URL}/signup`}>
             Start your free trial
           </a>
           <a className="btn btn-ghost-invert btn-lg" href={WHATSAPP_URL} target="_blank" rel="noreferrer">

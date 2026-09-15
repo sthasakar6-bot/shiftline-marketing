@@ -34,7 +34,7 @@ export default function Footer() {
           <a href="#customers">Customers</a>
           <a href="#team">Talk with our team</a>
           <a href={`${APP_URL}/login`}>Log in</a>
-          <a href={`${APP_URL}/login`}>Get started</a>
+          <a href={`${APP_URL}/signup`}>Get started</a>
           <a href="#contact">Contact</a>
         </div>
       </div>

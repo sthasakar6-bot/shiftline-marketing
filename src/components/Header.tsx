@@ -63,7 +63,7 @@ export default function Header() {
               <UserCircleIcon size={16} />
               <span style={{ marginLeft: 6 }}>Log in</span>
             </a>
-            <a className="btn btn-cta" href={`${APP_URL}/login`}>
+            <a className="btn btn-cta" href={`${APP_URL}/signup`}>
               Start 15-day trial
               <ArrowRightIcon size={15} />
             </a>

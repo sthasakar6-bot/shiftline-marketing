@@ -73,7 +73,7 @@ export default function Hero() {
             so nothing falls through the cracks.
           </p>
           <div className="hero-actions">
-            <a className="btn btn-primary btn-lg" href={`${APP_URL}/login`}>
+            <a className="btn btn-primary btn-lg" href={`${APP_URL}/signup`}>
               Get started
             </a>
             <a className="btn btn-ghost btn-lg" href="#features">
