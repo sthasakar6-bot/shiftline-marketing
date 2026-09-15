@@ -1,4 +1,4 @@
-import { APP_URL } from "../config";
+import { APP_URL, CONTACT_EMAIL } from "../config";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="#roles">Who it's for</a>
           <a href="#why">Why Shiftline</a>
           <a href={`${APP_URL}/login`}>Log in</a>
-          <a href="mailto:hello@shiftline.nl">Contact</a>
+          <a href={`mailto:${CONTACT_EMAIL}`}>Contact</a>
         </nav>
 
         <p className="footer-copy">© {new Date().getFullYear()} Shiftline. All rights reserved.</p>
