@@ -1,5 +1,6 @@
 :root {
-  /* Same slate/navy palette as the Shiftline app, for brand consistency. */
+  /* Same slate/navy palette as the Shiftline app, plus a warm amber used
+     sparingly as a second accent so the page isn't monochrome navy. */
   --text: #334155;
   --text-h: #0f172a;
   --bg: #f8fafc;
@@ -8,8 +9,13 @@
   --accent: #1e3a5f;
   --accent-bg: rgba(30, 58, 95, 0.07);
   --accent-glow: rgba(56, 189, 248, 0.35);
+  --accent-2: #c2703d;
+  --accent-2-bg: rgba(194, 112, 61, 0.1);
 
-  font: 16px/1.6 system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+
+  font: 16px/1.6 var(--font-body);
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
@@ -25,6 +31,8 @@
     --accent: #7ea6cc;
     --accent-bg: rgba(126, 166, 204, 0.14);
     --accent-glow: rgba(56, 189, 248, 0.25);
+    --accent-2: #e0995f;
+    --accent-2-bg: rgba(224, 153, 95, 0.14);
   }
 }
 
@@ -40,9 +48,22 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
   color: var(--text-h);
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 p {

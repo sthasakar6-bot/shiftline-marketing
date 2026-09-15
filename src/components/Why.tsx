@@ -1,4 +1,5 @@
 import { LocationIcon, GlobeIcon, OfflineIcon, BellIcon } from "./icons";
+import Reveal from "./Reveal";
 
 const REASONS = [
   {
@@ -31,16 +32,18 @@ export default function Why() {
         <h2 className="section-title center">Built for the way shift work actually happens</h2>
 
         <div className="why-grid">
-          {REASONS.map((r) => (
-            <div className="why-card" key={r.title}>
-              <div className="feature-icon feature-icon-sm">
-                <r.icon size={19} />
+          {REASONS.map((r, i) => (
+            <Reveal key={r.title} delay={i * 80}>
+              <div className="why-card">
+                <div className="feature-icon feature-icon-sm">
+                  <r.icon size={19} />
+                </div>
+                <div>
+                  <h3>{r.title}</h3>
+                  <p>{r.body}</p>
+                </div>
               </div>
-              <div>
-                <h3>{r.title}</h3>
-                <p>{r.body}</p>
-              </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

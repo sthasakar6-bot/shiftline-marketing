@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const ROLES = [
   {
     tag: "Employee",
@@ -36,16 +38,18 @@ export default function Roles() {
         <h2 className="section-title center">Everyone gets the view they actually need</h2>
 
         <div className="roles-grid">
-          {ROLES.map((r) => (
-            <div className="role-card" key={r.tag}>
-              <span className="role-tag">{r.tag}</span>
-              <h3>{r.title}</h3>
-              <ul>
-                {r.points.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </div>
+          {ROLES.map((r, i) => (
+            <Reveal key={r.tag} delay={i * 100}>
+              <div className="role-card">
+                <span className="role-tag">{r.tag}</span>
+                <h3>{r.title}</h3>
+                <ul>
+                  {r.points.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

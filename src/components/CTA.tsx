@@ -1,20 +1,22 @@
 import { APP_URL } from "../config";
+import Reveal from "./Reveal";
 
 export default function CTA() {
   return (
     <section className="cta" id="contact">
-      <div className="cta-inner">
+      <span className="cta-glow" aria-hidden="true" />
+      <Reveal className="cta-inner">
         <h2>Ready to get your schedule under control?</h2>
         <p>Set up your company and add your team in a few minutes — no credit card required to start.</p>
         <div className="hero-actions center">
-          <a className="btn btn-primary btn-lg" href={`${APP_URL}/login`}>
+          <a className="btn btn-primary-invert btn-lg" href={`${APP_URL}/login`}>
             Get started
           </a>
           <a className="btn btn-ghost-invert btn-lg" href="mailto:hello@shiftline.nl">
             Talk to us
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
