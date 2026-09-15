@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import PhotoBand from "./components/PhotoBand";
 import Roles from "./components/Roles";
 import Why from "./components/Why";
+import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import Support from "./components/Support";
 import CTA from "./components/CTA";
@@ -23,6 +24,7 @@ function App() {
         <PhotoBand />
         <Roles />
         <Why />
+        <Team />
         <FAQ />
         <Support />
         <CTA />

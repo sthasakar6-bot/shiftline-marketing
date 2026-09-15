@@ -1,4 +1,4 @@
-import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, WHATSAPP_URL } from "../config";
+import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCATION, WHATSAPP_URL } from "../config";
 
 export default function Footer() {
   return (
@@ -11,6 +11,7 @@ export default function Footer() {
           </a>
           <p className="footer-tagline">Scheduling, attendance, and payroll paperwork in one place.</p>
           <div className="footer-contact">
+            <span>{LOCATION}</span>
             <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             <a href={`tel:${CONTACT_PHONE_TEL}`}>{CONTACT_PHONE_DISPLAY}</a>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
