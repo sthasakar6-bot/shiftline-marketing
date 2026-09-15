@@ -21,7 +21,7 @@ const SHOWCASE = [
     Visual: PayrollVisual,
     tag: "Payroll paperwork",
     title: "Payslips and contracts, uploaded once and always findable",
-    body: "A dedicated bookkeeper role handles paperwork for the whole team, while everyone can pull up their own documents anytime.",
+    body: "A dedicated administration role handles paperwork for the whole team, while everyone can pull up their own documents anytime.",
   },
 ];
 

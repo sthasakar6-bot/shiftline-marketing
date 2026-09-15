@@ -1,4 +1,4 @@
-import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, WHATSAPP_URL } from "../config";
+import { APP_URL, CONTACT_EMAIL, WHATSAPP_URL } from "../config";
 import Reveal from "./Reveal";
 import { WhatsAppIcon } from "./icons";
 
@@ -20,10 +20,6 @@ export default function CTA() {
         </div>
         <div className="cta-contacts">
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-          <span className="cta-contacts-sep" aria-hidden="true">
-            ·
-          </span>
-          <a href={`tel:${CONTACT_PHONE_TEL}`}>{CONTACT_PHONE_DISPLAY}</a>
         </div>
       </Reveal>
     </section>

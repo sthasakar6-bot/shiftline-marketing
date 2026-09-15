@@ -3,6 +3,7 @@ import Reveal from "./Reveal";
 const ROLES = [
   {
     tag: "Employee",
+    photo: "/photos/barista.jpg",
     title: "Clock in, check the schedule, done",
     points: [
       "See upcoming shifts and clock in/out in a tap",
@@ -12,6 +13,7 @@ const ROLES = [
   },
   {
     tag: "Manager",
+    photo: "/photos/role-manager.jpg",
     title: "Run the team without the busywork",
     points: [
       "Build and adjust the roster for anyone in the company",
@@ -20,7 +22,8 @@ const ROLES = [
     ],
   },
   {
-    tag: "Bookkeeper",
+    tag: "Administration",
+    photo: "/photos/role-admin.jpg",
     title: "Payroll paperwork, nothing else",
     points: [
       "Upload payslips and contracts for the whole team",
@@ -41,6 +44,7 @@ export default function Roles() {
           {ROLES.map((r, i) => (
             <Reveal key={r.tag} delay={i * 100}>
               <div className="role-card">
+                <img className="role-photo" src={r.photo} alt="" />
                 <span className="role-tag">{r.tag}</span>
                 <h3>{r.title}</h3>
                 <ul>

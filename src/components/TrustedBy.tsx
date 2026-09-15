@@ -1,8 +1,8 @@
 import Reveal from "./Reveal";
 
 const COMPANIES = [
-  { name: "Super Sushi", src: "/photos/logo-super-sushi.png" },
-  { name: "Zuiderzoet", src: "/photos/logo-zuiderzoet.png" },
+  { name: "Super Sushi", src: "/photos/logo-super-sushi.png", showName: true },
+  { name: "Zuiderzoet", src: "/photos/logo-zuiderzoet.png", showName: false },
 ];
 
 export default function TrustedBy() {
@@ -13,6 +13,7 @@ export default function TrustedBy() {
         {COMPANIES.map((c) => (
           <span className="trusted-by-logo" key={c.name}>
             <img src={c.src} alt={c.name} />
+            {c.showName && <span className="trusted-by-name">{c.name}</span>}
           </span>
         ))}
       </div>

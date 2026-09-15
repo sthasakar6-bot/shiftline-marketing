@@ -64,6 +64,11 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual" aria-hidden="true">
+          <img
+            className="hero-photo"
+            src="/photos/role-manager.jpg"
+            alt="A manager holding a tablet, smiling"
+          />
           <div className="preview-card">
             <div className="preview-card-header">
               <span>Today's roster</span>
