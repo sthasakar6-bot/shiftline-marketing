@@ -31,7 +31,7 @@ const COMPARISON_ROWS: {
   starter: string | boolean;
   unlimited: string | boolean;
 }[] = [
-  { label: "Employees", trial: "Unlimited", starter: "Up to 5", unlimited: "Unlimited" },
+  { label: "Employees", trial: "Unlimited", starter: "Up to 4", unlimited: "Unlimited" },
   { label: "Departments", trial: "Unlimited", starter: "Up to 2", unlimited: "Unlimited" },
   { label: "Roster & shift scheduling", trial: true, starter: true, unlimited: true },
   { label: "Time & attendance (GPS + rounding)", trial: true, starter: true, unlimited: true },
@@ -116,12 +116,12 @@ export default function Pricing() {
                 </span>
                 <span className="pricing-note">
                   {billing === "monthly" ? (
-                    "per month, up to 5 employees"
+                    "per month, up to 4 employees"
                   ) : (
                     <>
                       billed once a year
                       <br />
-                      (up to 5 employees)
+                      (up to 4 employees)
                     </>
                   )}
                 </span>
