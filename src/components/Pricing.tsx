@@ -131,9 +131,11 @@ export default function Pricing() {
                 className="btn btn-lg btn-ghost"
                 href={`${APP_URL}/signup?intendedPlan=starter&interval=${billing}`}
               >
-                Start free trial
+                Get Starter
               </a>
-              <p className="pricing-trial-note">15 days free, then {formatPrice(starterMonthly)}/month.</p>
+              <p className="pricing-trial-note">
+                {billing === "monthly" ? "Billed monthly" : "Billed yearly"}, cancel anytime.
+              </p>
             </div>
           </Reveal>
 
@@ -155,9 +157,11 @@ export default function Pricing() {
                 className="btn btn-lg btn-primary"
                 href={`${APP_URL}/signup?intendedPlan=unlimited&interval=${billing}`}
               >
-                Start free trial
+                Get Unlimited
               </a>
-              <p className="pricing-trial-note">15 days free, then {formatPrice(unlimitedMonthly)}/month.</p>
+              <p className="pricing-trial-note">
+                {billing === "monthly" ? "Billed monthly" : "Billed yearly"}, cancel anytime.
+              </p>
             </div>
           </Reveal>
         </div>
