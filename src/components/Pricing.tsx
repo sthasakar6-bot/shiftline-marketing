@@ -127,10 +127,7 @@ export default function Pricing() {
                 </span>
               </div>
               <p className="pricing-extra">+ {formatPrice(starterExtra)}/month for each additional employee</p>
-              <a
-                className="btn btn-lg btn-ghost"
-                href={`${APP_URL}/signup?intendedPlan=starter&interval=${billing}`}
-              >
+              <a className="btn btn-lg btn-ghost" href={`${APP_URL}/purchase?plan=starter&interval=${billing}`}>
                 Get Starter
               </a>
               <p className="pricing-trial-note">
@@ -155,7 +152,7 @@ export default function Pricing() {
               <p className="pricing-extra">No per-employee fees, ever</p>
               <a
                 className="btn btn-lg btn-primary"
-                href={`${APP_URL}/signup?intendedPlan=unlimited&interval=${billing}`}
+                href={`${APP_URL}/purchase?plan=unlimited&interval=${billing}`}
               >
                 Get Unlimited
               </a>
