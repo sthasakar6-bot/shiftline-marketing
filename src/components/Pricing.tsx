@@ -102,7 +102,7 @@ export default function Pricing() {
               <a className="btn btn-lg btn-ghost" href={`${APP_URL}/signup`}>
                 Start free trial
               </a>
-              <p className="pricing-trial-note">Then pick Starter or Unlimited — cancel anytime.</p>
+              <p className="pricing-trial-note">Then pick Starter or Unlimited. Cancel anytime.</p>
             </div>
           </Reveal>
 

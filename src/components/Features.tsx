@@ -17,7 +17,7 @@ const SHOWCASE = [
     alt: "The Shiftline attendance tracking grid showing clock-in and clock-out times with GPS location for the whole team",
     tag: "Time & attendance",
     title: "GPS-tagged clock in, clock out",
-    body: "Employees clock in and out from any phone with their location attached, and every punch rounds itself to the nearest quarter hour — payroll never comes out to '7h 23m' again.",
+    body: "Employees clock in and out from any phone with their location attached, and every punch rounds itself to the nearest quarter hour, so payroll never comes out to '7h 23m' again.",
     color: "var(--accent-teal)",
   },
   {
@@ -35,7 +35,7 @@ const SHOWCASE = [
     alt: "The Shiftline team management screen showing every employee in the company",
     tag: "HR",
     title: "A team directory that's always up to date",
-    body: "Every employee in one place — add, edit, or offboard someone in a few clicks, with roles and access handled automatically.",
+    body: "Every employee in one place. Add, edit, or offboard someone in a few clicks, with roles and access handled automatically.",
     color: "var(--accent-ai)",
   },
   {
@@ -62,7 +62,7 @@ const SHOWCASE = [
     alt: "The Shiftline notifications panel showing a sick-leave notice and a vacation request from staff",
     tag: "Smart notifications",
     title: "Know the moment something needs you",
-    body: "A sick-day call-in, a vacation request, a missed clock-in — every alert reaches the right person and clears itself once it's resolved.",
+    body: "A sick-day call-in, a vacation request, a missed clock-in: every alert reaches the right person and clears itself once it's resolved.",
     color: "var(--accent-ai-2)",
   },
 ];

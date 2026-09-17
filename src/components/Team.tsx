@@ -15,7 +15,7 @@ export default function Team() {
           </h2>
           <p className="team-sub">
             Tell us how many people you plan and across how many locations, and we'll tell you
-            which plan fits — Starter included, if that's the honest answer.
+            which plan fits, Starter included, if that's the honest answer.
           </p>
         </Reveal>
 

@@ -8,7 +8,7 @@ export default function Support() {
       <Reveal className="section-inner support-band-inner">
         <h2 className="section-title center">Do you have another question?</h2>
         <p className="section-sub center support-band-sub">
-          Reach out any time — we're happy to help.
+          Reach out any time, we're happy to help.
         </p>
         <div className="hero-actions center">
           <a className="btn btn-primary btn-lg" href={`mailto:${CONTACT_EMAIL}`}>

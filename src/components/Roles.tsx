@@ -32,7 +32,7 @@ const ROLES = [
     points: [
       "Upload payslips and contracts for the whole team",
       "See hours worked this month, ready for payroll",
-      "Scoped access — no rosters, no HR settings, no distractions",
+      "Scoped access: no rosters, no HR settings, no distractions",
     ],
   },
 ];

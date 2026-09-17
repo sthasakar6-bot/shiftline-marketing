@@ -8,7 +8,7 @@ const OLD_WAY = [
 
 const NEW_WAY = [
   "Everything in place to build a schedule that adds up, fast.",
-  "Your team swaps shifts and requests leave in the app — you approve, you don't chase.",
+  "Your team swaps shifts and requests leave in the app. You approve, you don't chase.",
   "Approved hours flow straight into payroll, no re-entry.",
 ];
 

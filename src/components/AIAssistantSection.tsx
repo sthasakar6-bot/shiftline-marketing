@@ -14,14 +14,14 @@ export default function AIAssistantSection() {
         <Reveal direction="scale" className="ai-inner">
           <span className="ai-eyebrow">
             <SparkleIcon size={16} />
-            New — AI Scheduling Assistant
+            New: AI Scheduling Assistant
           </span>
           <h2 className="ai-title">
             Just <span className="ai-title-gradient">tell it</span> who works when
           </h2>
           <p className="ai-sub">
             Type "put Liam on shift Monday and Wednesday next week, 9am to 5pm" and Shiftline's AI reads it,
-            matches the right person, and proposes the shifts — you review and confirm before
+            matches the right person, and proposes the shifts. You review and confirm before
             anything touches the roster.
           </p>
           <div className="ai-chips">

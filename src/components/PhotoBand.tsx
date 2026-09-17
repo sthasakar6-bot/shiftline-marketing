@@ -8,7 +8,7 @@ export default function PhotoBand() {
           <p className="eyebrow">Built for real teams</p>
           <h2 className="section-title">People, not just data points</h2>
           <p className="section-sub photo-band-sub">
-            Shiftline is built for the people actually running the floor — baristas, servers,
+            Shiftline is built for the people actually running the floor: baristas, servers,
             shop staff, and the managers keeping it all together. It should feel as natural as
             the job itself.
           </p>

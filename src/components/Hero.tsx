@@ -69,7 +69,7 @@ export default function Hero() {
             <span className="accent-text"> in line.</span>
           </h1>
           <p className="hero-sub">
-            Scheduling, attendance, and payroll paperwork for shift-based teams — all in one place,
+            Scheduling, attendance, and payroll paperwork for shift-based teams, all in one place,
             so nothing falls through the cracks.
           </p>
           <div className="hero-actions">
@@ -81,7 +81,7 @@ export default function Hero() {
             </a>
           </div>
           <p className="hero-note">
-            Free for 15 days, no credit card required — works on any device, including as an
+            Free for 15 days, no credit card required. Works on any device, including as an
             installable app for the shop floor.
           </p>
         </div>
