@@ -130,6 +130,31 @@ export function ArrowRightIcon({ size = 16 }: IconProps) {
   );
 }
 
+export function MailIcon({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...common}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4 7 8 6 8-6" />
+    </svg>
+  );
+}
+
+export function PhoneIcon({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...common}>
+      <path d="M6.5 3.5 9 6c.4.5.4 1.2 0 1.8L7.3 9.6a13 13 0 0 0 7.1 7.1l1.8-1.7c.5-.4 1.2-.4 1.8 0l2.5 2.5c.5.5.5 1.4-.1 1.8-1.2 1-2.8 1.5-4.3 1.1-5.6-1.4-10-5.8-11.4-11.4-.4-1.5.1-3.1 1.1-4.3.4-.6 1.3-.6 1.8-.1Z" />
+    </svg>
+  );
+}
+
+export function ChatIcon({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...common}>
+      <path d="M4 4h16v12H8l-4 4V4Z" />
+    </svg>
+  );
+}
+
 export function OfflineIcon({ size = 22 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...common}>
