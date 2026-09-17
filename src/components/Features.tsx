@@ -21,6 +21,15 @@ const SHOWCASE = [
     color: "var(--accent-teal)",
   },
   {
+    id: "clockin",
+    image: "/photos/app/clockin.png",
+    alt: "The Shiftline clock-in screen showing today's shift and a one-tap Clock In button",
+    tag: "Clock in / Clock out",
+    title: "One tap to clock in, one tap to clock out",
+    body: "No punch card, no separate app. Employees see today's shift right on their phone and clock in or out with a single tap, timestamped and location-tagged automatically.",
+    color: "#15803d",
+  },
+  {
     id: "leave",
     image: "/photos/app/leave.png",
     alt: "The Shiftline leave approvals screen showing a pending vacation request and upcoming sick leave",
