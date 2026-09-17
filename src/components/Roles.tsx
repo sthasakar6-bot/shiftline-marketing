@@ -8,20 +8,20 @@ const ROLES = [
     title: "Clock in, check the schedule, done",
     color: "var(--accent-teal)",
     points: [
-      "See upcoming shifts and clock in/out in a tap",
-      "Request leave and track its status",
-      "View your own payslips and contracts anytime",
+      "Clock in and out in a single tap",
+      "Request leave and track approval status",
+      "Payslips and contracts, always on hand",
     ],
   },
   {
     tag: "Manager",
-    photo: "/photos/role-manager.jpg",
+    photo: "/photos/role-manager-2.jpg",
     title: "Run the team without the busywork",
     color: "var(--accent)",
     points: [
-      "Build and adjust the roster for anyone in the company",
-      "Approve or decline leave requests from one queue",
-      "See hours worked, attendance, and no-show alerts as they happen",
+      "Build and adjust the roster for the whole team",
+      "One queue for every leave request",
+      "Instant alerts on attendance and no-shows",
     ],
   },
   {
@@ -30,9 +30,9 @@ const ROLES = [
     title: "Payroll paperwork, nothing else",
     color: "var(--accent-2)",
     points: [
-      "Upload payslips and contracts for the whole team",
-      "See hours worked this month, ready for payroll",
-      "Scoped access: no rosters, no HR settings, no distractions",
+      "Upload payslips and contracts in one place",
+      "Monthly hours, export-ready for payroll",
+      "Scoped access, no rosters, no distractions",
     ],
   },
 ];
@@ -53,14 +53,25 @@ export default function Roles() {
               style={{ "--tag-color": r.color } as CSSProperties}
             >
               <div className="role-card">
-                <img className="role-photo" src={r.photo} alt="" />
-                <span className="role-tag">{r.tag}</span>
-                <h3>{r.title}</h3>
-                <ul>
-                  {r.points.map((p) => (
-                    <li key={p}>{p}</li>
-                  ))}
-                </ul>
+                <div className="role-photo-frame">
+                  <img className="role-photo" src={r.photo} alt="" />
+                </div>
+                <div className="role-card-body">
+                  <span className="role-tag">{r.tag}</span>
+                  <h3>{r.title}</h3>
+                  <ul>
+                    {r.points.map((p) => (
+                      <li key={p}>
+                        <span className="role-check" aria-hidden="true">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 12.5 9.5 18 20 6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Reveal>
           ))}
