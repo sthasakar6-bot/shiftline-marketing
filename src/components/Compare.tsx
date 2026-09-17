@@ -4,12 +4,14 @@ const OLD_WAY = [
   "Every week, hours of manual work figuring out who's actually available.",
   "A forgotten leave request that never makes it onto the schedule.",
   "A colleague paid wrong because the hours were off.",
+  "Typing out every shift by hand, one at a time.",
 ];
 
 const NEW_WAY = [
   "Everything in place to build a schedule that adds up, fast.",
   "Your team swaps shifts and requests leave in the app. You approve, you don't chase.",
   "Approved hours flow straight into payroll, no re-entry.",
+  "Tell the AI Assistant who works when, and it proposes the shifts for you.",
 ];
 
 export default function Compare() {
