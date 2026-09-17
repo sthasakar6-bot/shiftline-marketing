@@ -993,6 +993,18 @@
   justify-content: center;
   box-shadow: 0 16px 40px -24px rgba(15, 23, 42, 0.2);
   overflow: hidden;
+  /* Rises and scales in shortly after the copy above it fades in --
+     layered on top of the parent .reveal's own opacity/blur transition
+     for a two-step "text settles, then the screenshot arrives" motion. */
+  opacity: 0;
+  transform: translateY(36px) scale(0.96);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s, opacity 0.7s ease 0.18s,
+    box-shadow 0.3s ease;
+}
+
+.reveal-visible .showcase-visual-frame {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .showcase-screenshot {
@@ -1005,8 +1017,12 @@
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.showcase-row:hover .showcase-visual-frame {
+  box-shadow: 0 22px 48px -22px rgba(15, 23, 42, 0.28);
+}
+
 .showcase-row:hover .showcase-screenshot {
-  transform: scale(1.01);
+  transform: scale(1.012);
 }
 
 .showcase-tag {
