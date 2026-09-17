@@ -34,11 +34,15 @@ export default function AIAssistantSection() {
         </Reveal>
 
         <Reveal delay={150} direction="up" className="ai-visual-frame">
-          <img
+          <video
             className="ai-screenshot"
-            src="/photos/app/assistant.png"
-            alt="Shiftline's AI assistant proposing two shifts from a plain-English request, ready to confirm"
-            loading="lazy"
+            src="/videos/ai-assistant.mp4"
+            poster="/videos/ai-assistant-poster.png"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label="Shiftline's AI assistant reading a plain-English scheduling request and proposing two shifts, ready to confirm"
           />
         </Reveal>
       </div>
