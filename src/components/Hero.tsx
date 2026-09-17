@@ -62,7 +62,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-inner">
-        <div className="hero-copy">
+        <div className="hero-copy hero-fade-in">
           <p className="eyebrow">Staff scheduling &amp; workforce management</p>
           <h1>
             Keep every shift
@@ -86,7 +86,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
+        <div className="hero-visual hero-fade-in hero-fade-in-delay" aria-hidden="true">
           <img
             className="hero-photo"
             src="/photos/role-manager.jpg"
