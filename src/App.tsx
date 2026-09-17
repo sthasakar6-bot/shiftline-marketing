@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AIAssistantSection from "./components/AIAssistantSection";
 import TrustedBy from "./components/TrustedBy";
+import Compare from "./components/Compare";
 import Features from "./components/Features";
 import PhotoBand from "./components/PhotoBand";
 import Pricing from "./components/Pricing";
@@ -42,6 +43,7 @@ function App() {
         <Hero />
         <AIAssistantSection />
         <TrustedBy />
+        <Compare />
         <Features />
         <PhotoBand />
         <Pricing />

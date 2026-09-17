@@ -74,13 +74,6 @@ export default function Features() {
   return (
     <section className="section" id="features">
       <div className="section-inner">
-        <p className="eyebrow center">Everything a shift-based team needs</p>
-        <h2 className="section-title center">One app, not five spreadsheets</h2>
-        <p className="section-sub center">
-          Shiftline replaces the roster spreadsheet, the paper timesheet, the leave request thread,
-          and the folder of payslip PDFs — with one place everyone already knows how to use.
-        </p>
-
         <Reveal direction="up" className="showcase-switcher">
           <div className="showcase-tabbar" role="tablist" aria-label="Shiftline features">
             {SHOWCASE.map((s, i) => (
