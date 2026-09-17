@@ -1,6 +1,5 @@
 import { useState, type CSSProperties } from "react";
 import Reveal from "./Reveal";
-import { UsersIcon, LeafIcon } from "./icons";
 
 const SHOWCASE = [
   {
@@ -22,6 +21,33 @@ const SHOWCASE = [
     color: "var(--accent-teal)",
   },
   {
+    id: "leave",
+    image: "/photos/app/leave.png",
+    alt: "The Shiftline leave approvals screen showing a pending vacation request and upcoming sick leave",
+    tag: "Leave",
+    title: "One queue for every time-off request",
+    body: "Employees request time off, managers approve or reject from a single queue, and the roster reflects who's actually available.",
+    color: "var(--accent-solid)",
+  },
+  {
+    id: "hr",
+    image: "/photos/app/hr.png",
+    alt: "The Shiftline team management screen showing every employee in the company",
+    tag: "HR",
+    title: "A team directory that's always up to date",
+    body: "Every employee in one place — add, edit, or offboard someone in a few clicks, with roles and access handled automatically.",
+    color: "var(--accent-ai)",
+  },
+  {
+    id: "communication",
+    image: "/photos/app/communication.png",
+    alt: "The Shiftline team chat showing a manager and employees messaging about a shift",
+    tag: "Communication",
+    title: "One chat, not five group texts",
+    body: "A shared team chat built into the same app as the roster, so shift chatter never gets lost in WhatsApp.",
+    color: "var(--accent-pink)",
+  },
+  {
     id: "payroll",
     image: "/photos/app/payroll.png",
     alt: "The Shiftline payroll grid showing every employee's role, contract dates, and payslips at once",
@@ -37,20 +63,7 @@ const SHOWCASE = [
     tag: "Smart notifications",
     title: "Know the moment something needs you",
     body: "A sick-day call-in, a vacation request, a missed clock-in — every alert reaches the right person and clears itself once it's resolved.",
-    color: "var(--accent-pink)",
-  },
-];
-
-const MORE = [
-  {
-    icon: LeafIcon,
-    title: "Leave management",
-    body: "Employees request time off, managers approve from one queue, and the roster reflects who's actually available.",
-  },
-  {
-    icon: UsersIcon,
-    title: "Team directory",
-    body: "A read-only, company-wide directory so anyone can see who's on the team and where they're based.",
+    color: "var(--accent-ai-2)",
   },
 ];
 
@@ -96,20 +109,6 @@ export default function Features() {
             </div>
           </div>
         </Reveal>
-
-        <div className="feature-grid feature-grid-compact">
-          {MORE.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90} direction="scale">
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <f.icon />
-                </div>
-                <h3>{f.title}</h3>
-                <p>{f.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );
