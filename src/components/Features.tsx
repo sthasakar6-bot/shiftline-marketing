@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { UsersIcon, BellIcon, LeafIcon } from "./icons";
+import { UsersIcon, LeafIcon } from "./icons";
 
 const SHOWCASE = [
   {
@@ -23,8 +23,8 @@ const SHOWCASE = [
     image: "/photos/app/attendance.png",
     alt: "The Shiftline attendance tracking grid showing clock-in and clock-out times with GPS location for the whole team",
     tag: "Time & attendance",
-    title: "Clock in/out that rounds itself to clean numbers",
-    body: "GPS-tagged clock in/out from any phone, with quarter-hour rounding built in — payroll never comes out to '7h 23m' again.",
+    title: "GPS-tagged clock in, clock out",
+    body: "Employees clock in and out from any phone with their location attached, and every punch rounds itself to the nearest quarter hour — payroll never comes out to '7h 23m' again.",
   },
   {
     id: "payroll",
@@ -33,6 +33,14 @@ const SHOWCASE = [
     tag: "Payroll paperwork",
     title: "Payslips and contracts, uploaded once and always findable",
     body: "A dedicated administration role handles paperwork for the whole team, while everyone can pull up their own documents anytime.",
+  },
+  {
+    id: "notifications",
+    image: "/photos/app/notifications.png",
+    alt: "The Shiftline notifications panel showing a sick-leave notice and a vacation request from staff",
+    tag: "Smart notifications",
+    title: "Know the moment something needs you",
+    body: "A sick-day call-in, a vacation request, a missed clock-in — every alert reaches the right person and clears itself once it's resolved.",
   },
 ];
 
@@ -46,11 +54,6 @@ const MORE = [
     icon: UsersIcon,
     title: "Team directory",
     body: "A read-only, company-wide directory so anyone can see who's on the team and where they're based.",
-  },
-  {
-    icon: BellIcon,
-    title: "Smart notifications",
-    body: "Missed a clock-in or clock-out? The alert reaches everyone who needs it, and clears itself once it's resolved.",
   },
 ];
 
@@ -66,20 +69,15 @@ export default function Features() {
         </p>
 
         <div className="showcase">
-          {SHOWCASE.map((f, i) => (
-            <Reveal
-              key={f.title}
-              id={f.id}
-              direction={i % 2 === 1 ? "right" : "left"}
-              className={`showcase-row ${i % 2 === 1 ? "showcase-row-reverse" : ""}`}
-            >
-              <div className="showcase-visual-frame">
-                <img className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
-              </div>
+          {SHOWCASE.map((f) => (
+            <Reveal key={f.title} id={f.id} direction="up" className="showcase-row">
               <div className="showcase-copy">
                 <span className="showcase-tag">{f.tag}</span>
                 <h3>{f.title}</h3>
                 <p>{f.body}</p>
+              </div>
+              <div className="showcase-visual-frame">
+                <img className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
               </div>
             </Reveal>
           ))}
