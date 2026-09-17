@@ -1,27 +1,35 @@
 import Reveal from "./Reveal";
-import RosterVisual from "./visuals/RosterVisual";
-import AttendanceVisual from "./visuals/AttendanceVisual";
-import PayrollVisual from "./visuals/PayrollVisual";
 import { UsersIcon, BellIcon, LeafIcon } from "./icons";
 
 const SHOWCASE = [
   {
     id: "roster",
-    Visual: RosterVisual,
+    image: "/photos/app/roster.png",
+    alt: "The Shiftline roster grid showing a full week of shifts for a small team",
     tag: "Roster & shift scheduling",
     title: "Build the week in minutes, not a Sunday night",
     body: "Group people by work location, cover a colleague's shift without a chain of approvals, and see the whole team's week at a glance.",
   },
   {
+    id: "assistant",
+    image: "/photos/app/assistant.png",
+    alt: "The Shiftline AI assistant proposing two shifts from a plain-English request, ready to confirm",
+    tag: "AI scheduling assistant",
+    title: "Just tell it who works when",
+    body: "Type a request like \"put Liam on shift Monday and Wednesday, 9am to 5pm\" and review the proposed shifts before anything is created — no forms, no clicking through a calendar.",
+  },
+  {
     id: "attendance",
-    Visual: AttendanceVisual,
+    image: "/photos/app/attendance.png",
+    alt: "The Shiftline attendance tracking grid showing clock-in and clock-out times with GPS location for the whole team",
     tag: "Time & attendance",
     title: "Clock in/out that rounds itself to clean numbers",
     body: "GPS-tagged clock in/out from any phone, with quarter-hour rounding built in — payroll never comes out to '7h 23m' again.",
   },
   {
     id: "payroll",
-    Visual: PayrollVisual,
+    image: "/photos/app/payroll.png",
+    alt: "The Shiftline payroll grid showing every employee's role, contract dates, and payslips at once",
     tag: "Payroll paperwork",
     title: "Payslips and contracts, uploaded once and always findable",
     body: "A dedicated administration role handles paperwork for the whole team, while everyone can pull up their own documents anytime.",
@@ -66,7 +74,7 @@ export default function Features() {
               className={`showcase-row ${i % 2 === 1 ? "showcase-row-reverse" : ""}`}
             >
               <div className="showcase-visual-frame">
-                <f.Visual />
+                <img className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
               </div>
               <div className="showcase-copy">
                 <span className="showcase-tag">{f.tag}</span>
