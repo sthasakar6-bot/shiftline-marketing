@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Reveal from "./Reveal";
 import { UsersIcon, LeafIcon } from "./icons";
 
@@ -9,14 +10,7 @@ const SHOWCASE = [
     tag: "Roster & shift scheduling",
     title: "Build the week in minutes, not a Sunday night",
     body: "Group people by work location, cover a colleague's shift without a chain of approvals, and see the whole team's week at a glance.",
-  },
-  {
-    id: "assistant",
-    image: "/photos/app/assistant.png",
-    alt: "The Shiftline AI assistant proposing two shifts from a plain-English request, ready to confirm",
-    tag: "AI scheduling assistant",
-    title: "Just tell it who works when",
-    body: "Type a request like \"put Liam on shift Monday and Wednesday, 9am to 5pm\" and review the proposed shifts before anything is created — no forms, no clicking through a calendar.",
+    color: "var(--accent)",
   },
   {
     id: "attendance",
@@ -25,6 +19,7 @@ const SHOWCASE = [
     tag: "Time & attendance",
     title: "GPS-tagged clock in, clock out",
     body: "Employees clock in and out from any phone with their location attached, and every punch rounds itself to the nearest quarter hour — payroll never comes out to '7h 23m' again.",
+    color: "var(--accent-teal)",
   },
   {
     id: "payroll",
@@ -33,6 +28,7 @@ const SHOWCASE = [
     tag: "Payroll paperwork",
     title: "Payslips and contracts, uploaded once and always findable",
     body: "A dedicated administration role handles paperwork for the whole team, while everyone can pull up their own documents anytime.",
+    color: "var(--accent-2)",
   },
   {
     id: "notifications",
@@ -41,6 +37,7 @@ const SHOWCASE = [
     tag: "Smart notifications",
     title: "Know the moment something needs you",
     body: "A sick-day call-in, a vacation request, a missed clock-in — every alert reaches the right person and clears itself once it's resolved.",
+    color: "var(--accent-pink)",
   },
 ];
 
@@ -70,7 +67,13 @@ export default function Features() {
 
         <div className="showcase">
           {SHOWCASE.map((f) => (
-            <Reveal key={f.title} id={f.id} direction="up" className="showcase-row">
+            <Reveal
+              key={f.title}
+              id={f.id}
+              direction="up"
+              className="showcase-row"
+              style={{ "--tag-color": f.color } as CSSProperties}
+            >
               <div className="showcase-copy">
                 <span className="showcase-tag">{f.tag}</span>
                 <h3>{f.title}</h3>

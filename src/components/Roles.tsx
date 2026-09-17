@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Reveal from "./Reveal";
 
 const ROLES = [
@@ -5,6 +6,7 @@ const ROLES = [
     tag: "Employee",
     photo: "/photos/barista.jpg",
     title: "Clock in, check the schedule, done",
+    color: "var(--accent-teal)",
     points: [
       "See upcoming shifts and clock in/out in a tap",
       "Request leave and track its status",
@@ -15,6 +17,7 @@ const ROLES = [
     tag: "Manager",
     photo: "/photos/role-manager.jpg",
     title: "Run the team without the busywork",
+    color: "var(--accent)",
     points: [
       "Build and adjust the roster for anyone in the company",
       "Approve or decline leave requests from one queue",
@@ -25,6 +28,7 @@ const ROLES = [
     tag: "Administration",
     photo: "/photos/role-admin.jpg",
     title: "Payroll paperwork, nothing else",
+    color: "var(--accent-2)",
     points: [
       "Upload payslips and contracts for the whole team",
       "See hours worked this month, ready for payroll",
@@ -42,7 +46,12 @@ export default function Roles() {
 
         <div className="roles-grid">
           {ROLES.map((r, i) => (
-            <Reveal key={r.tag} delay={i * 100} direction="scale">
+            <Reveal
+              key={r.tag}
+              delay={i * 100}
+              direction="scale"
+              style={{ "--tag-color": r.color } as CSSProperties}
+            >
               <div className="role-card">
                 <img className="role-photo" src={r.photo} alt="" />
                 <span className="role-tag">{r.tag}</span>

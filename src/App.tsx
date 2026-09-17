@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import AIAssistantSection from "./components/AIAssistantSection";
 import TrustedBy from "./components/TrustedBy";
 import Features from "./components/Features";
 import PhotoBand from "./components/PhotoBand";
@@ -39,6 +40,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <AIAssistantSection />
         <TrustedBy />
         <Features />
         <PhotoBand />

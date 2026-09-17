@@ -1,6 +1,10 @@
 :root {
-  /* Same slate/navy palette as the Shiftline app, plus a warm amber used
-     sparingly as a second accent so the page isn't monochrome navy. */
+  /* Navy stays the brand anchor (nav, primary buttons), but each feature
+     area now gets its own accent color rather than the whole site leaning
+     on two muted tones -- warm amber for payroll/CTA, violet for the AI
+     assistant, teal for time & attendance, pink for the people-facing
+     sections. Ties the "colorful" look to actual meaning instead of
+     random decoration. */
   --text: #334155;
   --text-h: #0f172a;
   --bg: #f8fafc;
@@ -11,6 +15,15 @@
   --accent-glow: rgba(56, 189, 248, 0.35);
   --accent-2: #c2703d;
   --accent-2-bg: rgba(194, 112, 61, 0.1);
+  --accent-solid: #ea580c;
+
+  --accent-ai: #7c3aed;
+  --accent-ai-bg: rgba(124, 58, 237, 0.1);
+  --accent-ai-2: #ec4899;
+  --accent-teal: #0d9488;
+  --accent-teal-bg: rgba(13, 148, 136, 0.1);
+  --accent-pink: #db2777;
+  --accent-pink-bg: rgba(219, 39, 119, 0.1);
 
   --font-body: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -33,6 +46,15 @@
     --accent-glow: rgba(56, 189, 248, 0.25);
     --accent-2: #e0995f;
     --accent-2-bg: rgba(224, 153, 95, 0.14);
+    --accent-solid: #fb923c;
+
+    --accent-ai: #a78bfa;
+    --accent-ai-bg: rgba(167, 139, 250, 0.16);
+    --accent-ai-2: #f472b6;
+    --accent-teal: #2dd4bf;
+    --accent-teal-bg: rgba(45, 212, 191, 0.14);
+    --accent-pink: #f472b6;
+    --accent-pink-bg: rgba(244, 114, 182, 0.14);
   }
 }
 

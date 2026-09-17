@@ -32,6 +32,7 @@ export default function Header() {
             label="Product"
             onNavigate={close}
             items={[
+              { label: "AI Scheduling Assistant", href: "#ai-assistant" },
               { label: "Roster & shift scheduling", href: "#roster" },
               { label: "Time & attendance", href: "#attendance" },
               { label: "Payroll paperwork", href: "#payroll" },
