@@ -55,6 +55,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero-bg" ref={bgRef} aria-hidden="true">
+        <span className="hero-dots" />
         <span className="blob blob-a" />
         <span className="blob blob-b" />
         <span className="blob blob-c" />
@@ -74,16 +75,30 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary btn-lg" href={`${APP_URL}/signup`}>
-              Get started
+              Start free trial
             </a>
-            <a className="btn btn-ghost btn-lg" href="#features">
-              See how it works
+            <a className="btn btn-ghost btn-lg" href="#ai-assistant">
+              See demo
             </a>
           </div>
           <p className="hero-note">
             Free for 15 days, no credit card required. Works on any device, including as an
             installable app for the shop floor.
           </p>
+          <div className="hero-trust">
+            <span className="hero-trust-icon" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 12.5 9.5 18 20 6"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <span>Trusted by cafés, restaurants &amp; retail teams</span>
+          </div>
         </div>
 
         <div className="hero-visual hero-fade-in hero-fade-in-delay" aria-hidden="true">
