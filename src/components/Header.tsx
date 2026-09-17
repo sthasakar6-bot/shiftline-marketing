@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { APP_URL } from "../config";
 import NavDropdown from "./NavDropdown";
 import { HeadsetIcon, UserCircleIcon, ArrowRightIcon } from "./icons";
@@ -17,10 +17,20 @@ function openSupportChat() {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const close = () => setOpen(false);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
       <div className="site-header-inner">
         <a className="brand" href="#top" onClick={close}>
           <img src="/icon-192.png" alt="" className="brand-icon" />
@@ -72,7 +82,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="nav-toggle"
+          className={`nav-toggle ${open ? "nav-toggle-open" : ""}`}
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
