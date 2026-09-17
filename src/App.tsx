@@ -42,7 +42,6 @@ function App() {
       <main>
         <Hero />
         <AIAssistantSection />
-        <TrustedBy />
         <Compare />
         <Features />
         <PhotoBand />
@@ -52,6 +51,7 @@ function App() {
         <Team />
         <FAQ />
         <Support />
+        <TrustedBy />
         <CTA />
       </main>
       <Footer />
