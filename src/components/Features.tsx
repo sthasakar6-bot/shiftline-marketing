@@ -5,7 +5,9 @@ const SHOWCASE = [
   {
     id: "roster",
     image: "/photos/app/roster.png",
+    mobileImage: "/photos/app/mobile/roster.png",
     alt: "The Shiftline roster grid showing a full week of shifts for a small team",
+    mobileAlt: "The Shiftline roster on a phone, showing a month calendar with shift days marked",
     tag: "Roster & shift scheduling",
     title: "Build the week in minutes, not a Sunday night",
     body: "Group people by work location, cover a colleague's shift without a chain of approvals, and see the whole team's week at a glance.",
@@ -14,7 +16,9 @@ const SHOWCASE = [
   {
     id: "attendance",
     image: "/photos/app/attendance.png",
+    mobileImage: "/photos/app/mobile/attendance.png",
     alt: "The Shiftline attendance tracking grid showing clock-in and clock-out times with GPS location for the whole team",
+    mobileAlt: "The Shiftline attendance screen on a phone, showing a clocked-in shift and a live clock",
     tag: "Time & attendance",
     title: "GPS-tagged clock in, clock out",
     body: "Employees clock in and out from any phone with their location attached, and every punch rounds itself to the nearest quarter hour, so payroll never comes out to '7h 23m' again.",
@@ -32,7 +36,9 @@ const SHOWCASE = [
   {
     id: "leave",
     image: "/photos/app/leave.png",
+    mobileImage: "/photos/app/mobile/leave.png",
     alt: "The Shiftline leave approvals screen showing a pending vacation request and upcoming sick leave",
+    mobileAlt: "The Shiftline leave request form on a phone",
     tag: "Leave",
     title: "One queue for every time-off request",
     body: "Employees request time off, managers approve or reject from a single queue, and the roster reflects who's actually available.",
@@ -41,7 +47,9 @@ const SHOWCASE = [
   {
     id: "hr",
     image: "/photos/app/hr.png",
+    mobileImage: "/photos/app/mobile/hr.png",
     alt: "The Shiftline team management screen showing every employee in the company",
+    mobileAlt: "The Shiftline team directory on a phone",
     tag: "HR",
     title: "A team directory that's always up to date",
     body: "Every employee in one place. Add, edit, or offboard someone in a few clicks, with roles and access handled automatically.",
@@ -50,7 +58,9 @@ const SHOWCASE = [
   {
     id: "communication",
     image: "/photos/app/communication.png",
+    mobileImage: "/photos/app/mobile/communication.png",
     alt: "The Shiftline team chat showing a manager and employees messaging about a shift",
+    mobileAlt: "The Shiftline team chat on a phone",
     tag: "Communication",
     title: "One chat, not five group texts",
     body: "A shared team chat built into the same app as the roster, so shift chatter never gets lost in WhatsApp.",
@@ -68,7 +78,9 @@ const SHOWCASE = [
   {
     id: "notifications",
     image: "/photos/app/notifications.png",
+    mobileImage: "/photos/app/mobile/notifications.png",
     alt: "The Shiftline notifications panel showing a sick-leave notice and a vacation request from staff",
+    mobileAlt: "The Shiftline notifications on a phone",
     tag: "Smart notifications",
     title: "Know the moment something needs you",
     body: "A sick-day call-in, a vacation request, a missed clock-in: every alert reaches the right person and clears itself once it's resolved.",
@@ -108,6 +120,11 @@ export default function Features() {
             </div>
             <div className="showcase-visual-frame showcase-visual-frame-static">
               <img key={f.image} className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
+              {f.mobileImage && (
+                <div className="showcase-phone">
+                  <img key={f.mobileImage} src={f.mobileImage} alt={f.mobileAlt} loading="lazy" />
+                </div>
+              )}
             </div>
           </div>
         </Reveal>

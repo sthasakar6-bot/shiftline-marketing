@@ -1331,6 +1331,7 @@
 }
 
 .showcase-visual-frame {
+  position: relative;
   background: var(--panel-bg);
   border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent-2)) 25%, var(--border));
   border-radius: 16px;
@@ -1341,7 +1342,6 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 16px 40px -24px color-mix(in srgb, var(--tag-color, var(--accent-2)) 35%, rgba(15, 23, 42, 0.2));
-  overflow: hidden;
   /* Rises and scales in shortly after the copy above it fades in --
      layered on top of the parent .reveal's own opacity/blur transition
      for a two-step "text settles, then the screenshot arrives" motion. */
@@ -1372,6 +1372,46 @@
 
 .showcase-row:hover .showcase-screenshot {
   transform: scale(1.012);
+}
+
+.showcase-phone {
+  position: absolute;
+  right: 4%;
+  bottom: -32px;
+  width: 15%;
+  min-width: 110px;
+  max-width: 170px;
+  border-radius: 20px;
+  border: 5px solid #111;
+  background: #111;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -18px rgba(15, 23, 42, 0.5);
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s, opacity 0.6s ease 0.35s;
+}
+
+.reveal-visible .showcase-phone {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showcase-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.showcase-row:hover .showcase-phone {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 640px) {
+  .showcase-phone {
+    right: 8px;
+    bottom: -20px;
+    width: 26%;
+  }
 }
 
 .showcase-tag {
