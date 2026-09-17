@@ -77,7 +77,7 @@ export default function Hero() {
             <a className="btn btn-primary btn-lg" href={`${APP_URL}/signup`}>
               Start free trial
             </a>
-            <a className="btn btn-ghost btn-lg" href="#ai-assistant">
+            <a className="btn btn-ghost btn-lg" href="#demo">
               See demo
             </a>
           </div>

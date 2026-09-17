@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AIAssistantSection from "./components/AIAssistantSection";
+import DemoSection from "./components/DemoSection";
 import TrustedBy from "./components/TrustedBy";
 import Compare from "./components/Compare";
 import Features from "./components/Features";
@@ -42,6 +43,7 @@ function App() {
       <main>
         <Hero />
         <AIAssistantSection />
+        <DemoSection />
         <Compare />
         <Features />
         <PhotoBand />
