@@ -20,7 +20,7 @@ export default function AIAssistantSection() {
             Just <span className="ai-title-gradient">tell it</span> who works when
           </h2>
           <p className="ai-sub">
-            Type "put Anita on shift Monday to Friday, 9am–5pm" and Shiftline's AI reads it,
+            Type "put Liam on shift Monday and Wednesday next week, 9am to 5pm" and Shiftline's AI reads it,
             matches the right person, and proposes the shifts — you review and confirm before
             anything touches the roster.
           </p>
