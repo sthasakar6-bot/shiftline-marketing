@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { APP_URL } from "../config";
+import DemoModal from "./DemoModal";
 
 const BASE_ROWS = [
   { name: "Priya", initials: "P", time: "09:00 – 17:00", status: "Clocked in", statusClass: "in", live: true },
@@ -14,6 +15,7 @@ const SETTLE_MS = 220;
 export default function Hero() {
   const [tapping, setTapping] = useState(false);
   const [marcusIn, setMarcusIn] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const bgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -77,9 +79,9 @@ export default function Hero() {
             <a className="btn btn-primary btn-lg" href={`${APP_URL}/signup`}>
               Start free trial
             </a>
-            <a className="btn btn-ghost btn-lg" href="#demo">
+            <button type="button" className="btn btn-ghost btn-lg" onClick={() => setDemoOpen(true)}>
               See demo
-            </a>
+            </button>
           </div>
           <p className="hero-note">
             Free for 15 days, no credit card required. Works on any device, including as an
@@ -144,6 +146,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </section>
   );
 }
