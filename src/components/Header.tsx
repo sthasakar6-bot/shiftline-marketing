@@ -45,7 +45,12 @@ export default function Header() {
               { label: "AI Scheduling Assistant", href: "#ai-assistant" },
               { label: "Roster & shift scheduling", href: "#roster" },
               { label: "Time & attendance", href: "#attendance" },
+              { label: "Clock in / Clock out", href: "#clockin" },
+              { label: "Leave", href: "#leave" },
+              { label: "HR", href: "#hr" },
+              { label: "Communication", href: "#communication" },
               { label: "Payroll paperwork", href: "#payroll" },
+              { label: "Smart notifications", href: "#notifications" },
             ]}
           />
           <a href="#roles" onClick={close}>

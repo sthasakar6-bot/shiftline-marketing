@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import Reveal from "./Reveal";
 
 const SHOWCASE = [
@@ -91,6 +91,20 @@ const SHOWCASE = [
 export default function Features() {
   const [active, setActive] = useState(0);
   const f = SHOWCASE[active];
+
+  // The header's "Product" dropdown links straight to a specific feature
+  // (e.g. #payroll) -- match that hash to a tab so the panel actually
+  // shows that feature, not whichever tab happened to be active already.
+  useEffect(() => {
+    function syncFromHash() {
+      const id = window.location.hash.slice(1);
+      const index = SHOWCASE.findIndex((s) => s.id === id);
+      if (index !== -1) setActive(index);
+    }
+    syncFromHash();
+    window.addEventListener("hashchange", syncFromHash);
+    return () => window.removeEventListener("hashchange", syncFromHash);
+  }, []);
 
   return (
     <section className="section" id="features">
