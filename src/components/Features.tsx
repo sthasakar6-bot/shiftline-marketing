@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import Reveal from "./Reveal";
 import { UsersIcon, LeafIcon } from "./icons";
 
@@ -55,6 +55,9 @@ const MORE = [
 ];
 
 export default function Features() {
+  const [active, setActive] = useState(0);
+  const f = SHOWCASE[active];
+
   return (
     <section className="section" id="features">
       <div className="section-inner">
@@ -65,26 +68,34 @@ export default function Features() {
           and the folder of payslip PDFs — with one place everyone already knows how to use.
         </p>
 
-        <div className="showcase">
-          {SHOWCASE.map((f) => (
-            <Reveal
-              key={f.title}
-              id={f.id}
-              direction="up"
-              className="showcase-row"
-              style={{ "--tag-color": f.color } as CSSProperties}
-            >
-              <div className="showcase-copy">
-                <span className="showcase-tag">{f.tag}</span>
-                <h3>{f.title}</h3>
-                <p>{f.body}</p>
-              </div>
-              <div className="showcase-visual-frame">
-                <img className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal direction="up" className="showcase-switcher">
+          <div className="showcase-tabbar" role="tablist" aria-label="Shiftline features">
+            {SHOWCASE.map((s, i) => (
+              <button
+                key={s.id}
+                id={s.id}
+                type="button"
+                role="tab"
+                aria-selected={i === active}
+                className={`showcase-tab ${i === active ? "showcase-tab-active" : ""}`}
+                style={i === active ? { background: s.color, borderColor: s.color } : undefined}
+                onClick={() => setActive(i)}
+              >
+                {s.tag}
+              </button>
+            ))}
+          </div>
+
+          <div className="showcase-panel" style={{ "--tag-color": f.color } as CSSProperties}>
+            <div className="showcase-copy">
+              <h3 key={`t-${f.id}`}>{f.title}</h3>
+              <p key={`b-${f.id}`}>{f.body}</p>
+            </div>
+            <div className="showcase-visual-frame showcase-visual-frame-static">
+              <img key={f.image} className="showcase-screenshot" src={f.image} alt={f.alt} loading="lazy" />
+            </div>
+          </div>
+        </Reveal>
 
         <div className="feature-grid feature-grid-compact">
           {MORE.map((f, i) => (
