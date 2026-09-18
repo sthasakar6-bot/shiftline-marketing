@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ExistingCustomer from "./components/ExistingCustomer";
 import AIAssistantSection from "./components/AIAssistantSection";
 import TrustedBy from "./components/TrustedBy";
 import Compare from "./components/Compare";
@@ -16,7 +17,6 @@ import Support from "./components/Support";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 
 function App() {
@@ -37,10 +37,10 @@ function App() {
 
   return (
     <>
-      <ScrollProgress />
       <Header />
       <main>
         <Hero />
+        <ExistingCustomer />
         <AIAssistantSection />
         <Compare />
         <Features />
