@@ -64,7 +64,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* So an anchor jump doesn't land the target flush behind the sticky header. */
