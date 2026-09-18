@@ -39,10 +39,10 @@ function App() {
   return (
     <>
       <ScrollProgress />
+      <ExistingCustomer />
       <Header />
       <main>
         <Hero />
-        <ExistingCustomer />
         <AIAssistantSection />
         <Compare />
         <Features />

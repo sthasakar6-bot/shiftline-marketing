@@ -1235,34 +1235,50 @@
   }
 }
 
-/* ---------- existing customer banner ---------- */
+/* ---------- existing customer top bar ---------- */
 
-.existing-customer {
-  border-bottom: 1px solid var(--border);
-  background: var(--panel-bg);
+.existing-customer-bar {
+  background: #14273e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.existing-customer-row {
+.existing-customer-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 10px;
   flex-wrap: wrap;
-  padding-block: 18px;
+  padding-block: 9px;
   text-align: center;
 }
 
 .existing-customer-text {
-  font-size: 14.5px;
+  font-size: 13px;
   font-weight: 600;
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
 
-.existing-customer .btn {
+.existing-customer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   flex-shrink: 0;
-  padding: 8px 16px;
-  font-size: 14px;
+}
+
+.existing-customer-link:hover {
+  color: var(--accent-solid);
+}
+
+@media (max-width: 480px) {
+  .existing-customer-text {
+    font-size: 12px;
+  }
 }
 
 /* ---------- scroll progress ---------- */
