@@ -9,8 +9,7 @@ export default function Team() {
         <Reveal className="team-copy-col" direction="left">
           <span className="eyebrow eyebrow-gradient">Get in touch</span>
           <h2 className="team-heading">
-            Questions before
-            <br />
+            Questions before <br />
             you sign up?
           </h2>
           <p className="team-sub">
