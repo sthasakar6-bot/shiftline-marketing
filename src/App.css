@@ -2797,14 +2797,66 @@
   color: var(--accent);
 }
 
+.footer-payment-methods {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-inline: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-payment-methods-label {
+  font-size: 12px;
+  opacity: 0.55;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.footer-payment-methods-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-payment-methods-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.footer-payment-methods-list img {
+  height: 16px;
+  width: auto;
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer-payment-methods-list li {
+    background: #fff;
+  }
+}
+
 .footer-copy {
   max-width: 1140px;
   margin: 0 auto;
   padding-inline: 24px;
   font-size: 12px;
   opacity: 0.5;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
 @media (max-width: 700px) {

@@ -1,5 +1,19 @@
 import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCATION, WHATSAPP_URL } from "../config";
 
+// Mollie's own hosted icon set -- the same assets shown on Mollie's checkout
+// page itself, kept in sync with whichever methods are actually activated on
+// the account (see billing/providers/mollie.ts in the backend).
+const PAYMENT_METHODS = [
+  { id: "ideal", label: "iDEAL" },
+  { id: "creditcard", label: "Credit card" },
+  { id: "applepay", label: "Apple Pay" },
+  { id: "googlepay", label: "Google Pay" },
+  { id: "paypal", label: "PayPal" },
+  { id: "directdebit", label: "SEPA Direct Debit" },
+  { id: "banktransfer", label: "Bank transfer" },
+  { id: "paybybank", label: "Pay by Bank" },
+];
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -37,6 +51,21 @@ export default function Footer() {
           <a href={`${APP_URL}/signup`}>Get started</a>
           <a href="#contact">Contact</a>
         </div>
+      </div>
+
+      <div className="footer-payment-methods">
+        <span className="footer-payment-methods-label">Secure payments via Mollie</span>
+        <ul className="footer-payment-methods-list">
+          {PAYMENT_METHODS.map((method) => (
+            <li key={method.id} title={method.label}>
+              <img
+                src={`https://www.mollie.com/external/icons/payment-methods/${method.id}.svg`}
+                alt={method.label}
+                loading="lazy"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
 
       <p className="footer-copy">© {new Date().getFullYear()} Shiftline. All rights reserved.</p>
