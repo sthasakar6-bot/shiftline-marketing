@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-payment-methods">
-        <span className="footer-payment-methods-label">Secure payments via Mollie</span>
+        <span className="footer-payment-methods-label">Secure payments</span>
         <ul className="footer-payment-methods-list">
           {PAYMENT_METHODS.map((method) => (
             <li key={method.id} title={method.label}>

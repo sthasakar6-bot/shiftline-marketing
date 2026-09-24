@@ -950,30 +950,6 @@
   }
 }
 
-/* ---------- whatsapp floating button ---------- */
-
-.whatsapp-fab {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 24px -6px rgba(37, 211, 102, 0.55);
-  z-index: 30;
-  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.whatsapp-fab:hover {
-  transform: scale(1.07);
-}
-
-
 /* ---------- back to top ---------- */
 
 .back-to-top {
@@ -2805,15 +2781,16 @@
   padding-top: 24px;
   padding-bottom: 4px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  text-align: center;
 }
 
 .footer-payment-methods-label {
-  font-size: 12px;
-  opacity: 0.55;
-  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.6;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -2821,6 +2798,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -2831,15 +2809,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
-  padding: 0 10px;
-  border-radius: 6px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
   background: #fff;
   border: 1px solid var(--border);
 }
 
 .footer-payment-methods-list img {
-  height: 16px;
+  height: 24px;
   width: auto;
   display: block;
 }

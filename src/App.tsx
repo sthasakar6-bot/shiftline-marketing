@@ -16,7 +16,6 @@ import FAQ from "./components/FAQ";
 import Support from "./components/Support";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 
@@ -57,7 +56,6 @@ function App() {
         <CTA />
       </main>
       <Footer />
-      <WhatsAppButton />
       <BackToTop />
     </>
   );
