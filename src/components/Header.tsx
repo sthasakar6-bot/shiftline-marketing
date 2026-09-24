@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
       <div className="site-header-inner">
-        <a className="brand" href="#top" onClick={close}>
+        <a className="brand" href="/#top" onClick={close}>
           <img src="/icon-192.png" alt="" className="brand-icon" />
           <span className="brand-text">Shiftline</span>
         </a>
@@ -42,32 +42,32 @@ export default function Header() {
             label="Product"
             onNavigate={close}
             items={[
-              { label: "AI Scheduling Assistant", href: "#ai-assistant" },
-              { label: "Roster & shift scheduling", href: "#roster" },
-              { label: "Time & attendance", href: "#attendance" },
-              { label: "Clock in / Clock out", href: "#clockin" },
-              { label: "Leave", href: "#leave" },
-              { label: "HR", href: "#hr" },
-              { label: "Communication", href: "#communication" },
-              { label: "Payroll paperwork", href: "#payroll" },
-              { label: "Smart notifications", href: "#notifications" },
+              { label: "AI Scheduling Assistant", href: "/#ai-assistant" },
+              { label: "Roster & shift scheduling", href: "/#roster" },
+              { label: "Time & attendance", href: "/#attendance" },
+              { label: "Clock in / Clock out", href: "/#clockin" },
+              { label: "Leave", href: "/#leave" },
+              { label: "HR", href: "/#hr" },
+              { label: "Communication", href: "/#communication" },
+              { label: "Payroll paperwork", href: "/#payroll" },
+              { label: "Smart notifications", href: "/#notifications" },
             ]}
           />
-          <a href="#roles" onClick={close}>
+          <a href="/#roles" onClick={close}>
             Who it's for
           </a>
-          <a href="#customers" onClick={close}>
+          <a href="/#customers" onClick={close}>
             Customers
           </a>
-          <a href="#pricing" onClick={close}>
+          <a href="/#pricing" onClick={close}>
             Pricing
           </a>
           <NavDropdown
             label="Company"
             onNavigate={close}
             items={[
-              { label: "Talk with our team", href: "#team" },
-              { label: "Contact", href: "#contact" },
+              { label: "Talk with our team", href: "/#team" },
+              { label: "Contact", href: "/#contact" },
             ]}
           />
 

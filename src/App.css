@@ -983,6 +983,64 @@
   border-color: var(--accent);
 }
 
+/* ---------- legal pages ---------- */
+
+.legal-page {
+  padding-block: 64px 96px;
+}
+
+.legal-page-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-inline: 24px;
+  line-height: 1.7;
+}
+
+.legal-page-inner h1 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 6px;
+}
+
+.legal-updated {
+  opacity: 0.6;
+  font-size: 13.5px;
+  margin-bottom: 28px;
+}
+
+.legal-page-inner h2 {
+  font-size: 19px;
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+
+.legal-page-inner p,
+.legal-page-inner li {
+  font-size: 15px;
+  opacity: 0.88;
+}
+
+.legal-page-inner ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-page-inner a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.legal-callout {
+  background: var(--panel-bg-alt, rgba(37, 99, 235, 0.06));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
 /* ---------- cookie banner ---------- */
 
 .cookie-banner {

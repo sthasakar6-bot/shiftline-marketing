@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="site-footer-inner">
         <div className="footer-col footer-brand-col">
-          <a className="brand" href="#top">
+          <a className="brand" href="/#top">
             <img src="/icon-192.png" alt="" className="brand-icon" />
             <span className="brand-text">Shiftline</span>
           </a>
@@ -41,20 +41,21 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3 className="footer-col-title">Product</h3>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#roles">Who it's for</a>
-          <a href="#why">Why Shiftline</a>
-          <a href="#faq">FAQ</a>
+          <a href="/#features">Features</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#roles">Who it's for</a>
+          <a href="/#why">Why Shiftline</a>
+          <a href="/#faq">FAQ</a>
         </div>
 
         <div className="footer-col">
           <h3 className="footer-col-title">Company</h3>
-          <a href="#customers">Customers</a>
-          <a href="#team">Talk with our team</a>
+          <a href="/#customers">Customers</a>
+          <a href="/#team">Talk with our team</a>
           <a href={`${APP_URL}/login`}>Log in</a>
           <a href={`${APP_URL}/signup`}>Get started</a>
-          <a href="#contact">Contact</a>
+          <a href="/#contact">Contact</a>
+          <a href="/privacy">Privacy Policy</a>
           <button type="button" className="footer-link-btn" onClick={reopenCookieBanner}>
             Cookie settings
           </button>
