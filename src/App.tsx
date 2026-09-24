@@ -18,6 +18,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
   // A fresh page load at e.g. shiftline.nl/#pricing (arriving from an
@@ -57,6 +58,7 @@ function App() {
       </main>
       <Footer />
       <BackToTop />
+      <CookieBanner />
     </>
   );
 }

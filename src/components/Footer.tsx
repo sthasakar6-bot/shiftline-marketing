@@ -1,4 +1,5 @@
 import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCATION, WHATSAPP_URL } from "../config";
+import { reopenCookieBanner } from "./CookieBanner";
 
 // Mollie's own hosted icon set -- the same assets shown on Mollie's checkout
 // page itself, kept in sync with whichever methods are actually activated on
@@ -54,6 +55,9 @@ export default function Footer() {
           <a href={`${APP_URL}/login`}>Log in</a>
           <a href={`${APP_URL}/signup`}>Get started</a>
           <a href="#contact">Contact</a>
+          <button type="button" className="footer-link-btn" onClick={reopenCookieBanner}>
+            Cookie settings
+          </button>
         </div>
       </div>
 
