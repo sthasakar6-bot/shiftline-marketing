@@ -3,13 +3,17 @@ import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCAT
 // Mollie's own hosted icon set -- the same assets shown on Mollie's checkout
 // page itself, kept in sync with whichever methods are actually activated on
 // the account (see billing/providers/mollie.ts in the backend).
+// SEPA Direct Debit is deliberately left out here -- it's never something a
+// customer picks directly at checkout (Mollie sets it up automatically
+// behind the scenes for recurring renewal charges after the first payment),
+// and its icon is visually identical to Bank Transfer's, which already
+// covers the "SEPA" branding customers would recognize.
 const PAYMENT_METHODS = [
   { id: "ideal", label: "iDEAL" },
   { id: "creditcard", label: "Credit card" },
   { id: "applepay", label: "Apple Pay" },
   { id: "googlepay", label: "Google Pay" },
   { id: "paypal", label: "PayPal" },
-  { id: "directdebit", label: "SEPA Direct Debit" },
   { id: "banktransfer", label: "Bank transfer" },
   { id: "paybybank", label: "Pay by Bank" },
 ];
