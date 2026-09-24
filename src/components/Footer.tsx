@@ -1,6 +1,5 @@
 import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCATION, WHATSAPP_URL } from "../config";
 import { reopenCookieBanner } from "./CookieBanner";
-import { ShieldCheckIcon } from "./icons";
 
 // Mollie's own hosted icon set -- the same assets shown on Mollie's checkout
 // page itself, kept in sync with whichever methods are actually activated on
@@ -67,7 +66,7 @@ export default function Footer() {
 
       <div className="footer-trust-row">
         <a className="footer-gdpr-badge" href="/privacy" title="See our Privacy Policy">
-          <ShieldCheckIcon size={18} />
+          <img src="/gdpr-badge.png" alt="GDPR compliant" width={36} height={36} />
           <span>
             GDPR compliant
             <small>Data stored in the EU</small>
