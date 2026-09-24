@@ -1,5 +1,6 @@
 import { APP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, LOCATION, WHATSAPP_URL } from "../config";
 import { reopenCookieBanner } from "./CookieBanner";
+import { ShieldCheckIcon } from "./icons";
 
 // Mollie's own hosted icon set -- the same assets shown on Mollie's checkout
 // page itself, kept in sync with whichever methods are actually activated on
@@ -64,19 +65,29 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer-payment-methods">
-        <span className="footer-payment-methods-label">Secure payments</span>
-        <ul className="footer-payment-methods-list">
-          {PAYMENT_METHODS.map((method) => (
-            <li key={method.id} title={method.label}>
-              <img
-                src={`https://www.mollie.com/external/icons/payment-methods/${method.id}.svg`}
-                alt={method.label}
-                loading="lazy"
-              />
-            </li>
-          ))}
-        </ul>
+      <div className="footer-trust-row">
+        <a className="footer-gdpr-badge" href="/privacy" title="See our Privacy Policy">
+          <ShieldCheckIcon size={18} />
+          <span>
+            GDPR compliant
+            <small>Data stored in the EU</small>
+          </span>
+        </a>
+
+        <div className="footer-payment-methods">
+          <span className="footer-payment-methods-label">Secure payments</span>
+          <ul className="footer-payment-methods-list">
+            {PAYMENT_METHODS.map((method) => (
+              <li key={method.id} title={method.label}>
+                <img
+                  src={`https://www.mollie.com/external/icons/payment-methods/${method.id}.svg`}
+                  alt={method.label}
+                  loading="lazy"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <p className="footer-copy">© {new Date().getFullYear()} Shiftline. All rights reserved.</p>
