@@ -15,7 +15,9 @@ export default function PrivacyPolicyPage() {
             Shiftline ("we," "us," "our") provides scheduling, attendance, and payroll-paperwork
             software for shift-based teams. This policy explains what personal data we collect,
             why we collect it, where it's stored, how long we keep it, and how you can access,
-            correct, export, or delete it.
+            correct, export, or delete it. If you're a Shiftline customer looking for the details
+            of how we process your company's data as a processor, see our{" "}
+            <a href="/dpa">Data Processing Agreement</a>.
           </p>
 
           <div className="legal-callout">
