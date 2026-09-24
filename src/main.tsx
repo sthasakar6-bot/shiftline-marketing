@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.tsx'
 import DpaPage from './pages/DpaPage.tsx'
+import TermsPage from './pages/TermsPage.tsx'
 import CookieBanner from './components/CookieBanner.tsx'
 
 // No router library -- this is a small static site (homepage + a couple of
@@ -18,6 +19,8 @@ function Page() {
       return <PrivacyPolicyPage />
     case '/dpa':
       return <DpaPage />
+    case '/terms':
+      return <TermsPage />
     default:
       return <App />
   }

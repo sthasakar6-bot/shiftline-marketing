@@ -55,6 +55,7 @@ export default function Footer() {
           <a href={`${APP_URL}/login`}>Log in</a>
           <a href={`${APP_URL}/signup`}>Get started</a>
           <a href="/#contact">Contact</a>
+          <a href="/terms">Terms of Service</a>
           <a href="/privacy">Privacy Policy</a>
           <a href="/dpa">Data Processing Agreement</a>
           <button type="button" className="footer-link-btn" onClick={reopenCookieBanner}>
