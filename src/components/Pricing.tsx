@@ -113,6 +113,7 @@ export default function Pricing() {
               <div className="pricing-price">
                 <span className="pricing-amount">
                   {billing === "monthly" ? formatPrice(starterMonthly) : formatPrice(starterYearlyTotal)}
+                  <span className="pricing-vat-note">+ VAT</span>
                 </span>
                 <span className="pricing-note">
                   {billing === "monthly" ? (
@@ -144,6 +145,7 @@ export default function Pricing() {
               <div className="pricing-price">
                 <span className="pricing-amount">
                   {billing === "monthly" ? formatPrice(unlimitedMonthly) : formatPrice(unlimitedYearlyTotal)}
+                  <span className="pricing-vat-note">+ VAT</span>
                 </span>
                 <span className="pricing-note">
                   {billing === "monthly" ? "per month, unlimited employees" : "billed once a year"}

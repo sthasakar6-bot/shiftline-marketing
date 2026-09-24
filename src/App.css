@@ -2286,6 +2286,22 @@
   max-width: 140px;
 }
 
+.pricing-amount {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.pricing-vat-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.55;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
 .pricing-extra {
   font-size: 13px;
   opacity: 0.7;
